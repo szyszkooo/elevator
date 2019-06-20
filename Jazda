@@ -1,0 +1,17 @@
+public:void Dopychanie(int a, int b) {
+		int t1 = 0;
+		for (int i = numer_kolejki; i < Kolejka.size(); i++) {
+			if (Kolejka[i] == a) { goto xd; }
+		}
+		Kolejka.push_back(a);
+				xd:
+		for (int i = numer_kolejki; i < Kolejka.size(); i++) {
+			if (t1 == 0) {
+				if (Kolejka[i] == a)  t1 = 1;
+			}
+			if (t1 == 1) {
+				if (Kolejka[i] == b)  t1 = 2;
+			}
+		}
+		if(t1<2)  Kolejka.push_back(b);
+	}
