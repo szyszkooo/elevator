@@ -1,0 +1,39 @@
+public:void Wsiadanie(int pietro) {
+		int przerzutka = 0;
+		bool omg = 0;
+		for (int i = 0; i < 30; i++) {
+			if (ekrany[25 + pietro] != 0) {
+				ekrany[25 + pietro]--;
+				ekrany[30 + pietro]++;
+				ciezar = ciezar - 60;
+				
+			}
+			if (ciezar > 650)   break;
+						
+			if (przerzutka == 4) continue;
+			
+			if (ekrany[(5 * pietro) + przerzutka] != 0)
+			{
+				ekrany[(5 * pietro) + przerzutka]--;
+				ciezar = ciezar + 60;
+				if (pietro == 0)  ekrany[25 + 1+przerzutka]++; 
+				if (pietro == 1) {
+					if (przerzutka == 0) ekrany[25]++;
+					else ekrany[25 + 1 + przerzutka]++;
+				}
+				if (pietro == 2) {
+					if (przerzutka < 2) ekrany[25+przerzutka]++;
+					else ekrany[25 + 1 + przerzutka]++;
+				}
+				if (pietro == 3) {
+					if (przerzutka < 3) ekrany[25 + przerzutka]++;
+					else ekrany[25 + 1 + przerzutka]++;
+					}
+				if (pietro == 4) ekrany[25 + przerzutka]++;
+										}
+				
+			
+			else przerzutka++;
+			
+		} 
+	}
